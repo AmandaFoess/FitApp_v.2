@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/My Drive/Computer Science/android studio .zip files/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/agfoe/AndroidStudioProjects/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/activity_main.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/agfoe/AndroidStudioProjects/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/exercise_entry.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/agfoe/AndroidStudioProjects/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/food_entry.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/agfoe/AndroidStudioProjects/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/view_entry.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/agfoe/AndroidStudioProjects/Fit Bitch (Basic)/FitBitchBasic/app/src/main/res/layout/weight_entry.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".food_entry">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/food_entry"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_200"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_space_top" />
+
+    <TextView
+        android:id="@+id/calories_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/calories_title"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_space" />
+
+    <ImageButton
+        android:id="@+id/cal_add_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="cal_add"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calories_title"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/cal_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/cal_add_btn"
+        app:layout_constraintStart_toEndOf="@+id/cal_min_btn"
+        app:layout_constraintTop_toTopOf="@+id/calories_title" />
+
+    <ImageButton
+        android:id="@+id/cal_min_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:onClick="cal_min"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/calories_title"
+        app:layout_constraintTop_toTopOf="@+id/calories_title"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/net_carbs_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/net_carbs"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calories_title" />
+
+    <ImageButton
+        android:id="@+id/net_carbs_add_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="net_carbs_add"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/net_carbs_title"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/carbs_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/net_carbs_add_btn"
+        app:layout_constraintStart_toEndOf="@+id/net_carbs_min_btn"
+        app:layout_constraintTop_toTopOf="@+id/net_carbs_title" />
+
+    <ImageButton
+        android:id="@+id/net_carbs_min_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:onClick="net_carbs_min"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/net_carbs_title"
+        app:layout_constraintTop_toTopOf="@+id/net_carbs_title"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/fats_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/fats"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/net_carbs_title" />
+
+    <ImageButton
+        android:id="@+id/fats_add_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="fats_add"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fats_title"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/fats_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/fats_add_btn"
+        app:layout_constraintStart_toEndOf="@+id/fats_min_btn"
+        app:layout_constraintTop_toTopOf="@+id/fats_title" />
+
+    <ImageButton
+        android:id="@+id/fats_min_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:onClick="fats_min"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/fats_title"
+        app:layout_constraintTop_toTopOf="@+id/fats_title"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/water_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/bottles_of_water"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/protein_title" />
+
+    <ImageButton
+        android:id="@+id/water_add_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="water_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="@+id/water_title"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/water_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/water_add_btn"
+        app:layout_constraintStart_toEndOf="@+id/water_min_btn"
+        app:layout_constraintTop_toTopOf="@+id/water_title" />
+
+    <ImageButton
+        android:id="@+id/water_min_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:onClick="water_min"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/water_title"
+        app:layout_constraintTop_toTopOf="@+id/water_title"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/protein_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/protein"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fats_title" />
+
+    <ImageButton
+        android:id="@+id/protein_add_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-12dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="protein_add"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/protein_title"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/protein_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/protein_add_btn"
+        app:layout_constraintStart_toEndOf="@+id/protein_min_btn"
+        app:layout_constraintTop_toTopOf="@+id/protein_title" />
+
+    <ImageButton
+        android:id="@+id/protein_min_btn"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:onClick="protein_min"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/protein_title"
+        app:layout_constraintTop_toTopOf="@+id/protein_title"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="TODO" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_entry_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/enter_data"
+        android:textSize="25sp"
+        android:background="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_space2" />
+
+    <View
+        android:id="@+id/horizontal_space_top"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/purple_200"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/horizontal_space"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/purple_200"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <View
+        android:id="@+id/horizontal_space2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/water_title" />
+
+    <View
+        android:id="@+id/vertical_space"
+        android:layout_width="8dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_space2"/>
+
+    <View
+        android:id="@+id/vertical_space2"
+        android:layout_width="8dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_space2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

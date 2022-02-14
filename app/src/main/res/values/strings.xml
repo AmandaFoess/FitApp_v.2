@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fit Bitch (Basic)</string>
+    <string name="calories_title">Calories</string>
+    <string name="carbs">Carbs</string>
+    <string name="fats">Fats</string>
+    <string name="bottles_of_water">Water</string>
+    <string name="exercise">Exercise</string>
+    <string name="protein">Protein</string>
+    <string name="weight_title">Weight (lbs)</string>
+    <string name="weight_title2">Weight Change</string>
+    <string name="enter_data">~ Enter Data ~</string>
+    <string name="zero">0</string>
+    <string name="food_entry">Food Entry</string>
+    <string name="net_carbs">Net Carbs</string>
+</resources>
