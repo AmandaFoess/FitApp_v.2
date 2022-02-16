@@ -47,7 +47,7 @@ public class weight_entry extends AppCompatActivity implements View.OnClickListe
         final ProgressDialog loading = ProgressDialog.show(this,"Adding Weight","Please wait");
         final String weight = weight_entry.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbxRSi8dYx13vJcryuUTN90Y9_EtTIMSgj89egaK00lIyy_M4YDLP42oWS--P-GfXy5Q/exec",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzCZ8F8PJKmO9avZBPY1KCp6qr8-34GTDj6u_KR8LzUI5kEPus7rvs4M4W1VFVI69wU/exec",
                 response -> {
                     if(loading.isShowing())loading.dismiss();
                     Toast.makeText(this,response,Toast.LENGTH_LONG).show();
