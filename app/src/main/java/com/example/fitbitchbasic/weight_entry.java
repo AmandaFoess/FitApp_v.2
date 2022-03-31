@@ -32,7 +32,7 @@ public class weight_entry extends AppCompatActivity implements View.OnClickListe
 
         weight_entry = findViewById(R.id.weightNumberDecimal);
 
-        btn_weight_entry = (Button)findViewById(R.id.weight_entry_btn);
+        btn_weight_entry = findViewById(R.id.weight_entry_btn);
         btn_weight_entry.setOnClickListener(this);
     }
 
@@ -44,10 +44,10 @@ public class weight_entry extends AppCompatActivity implements View.OnClickListe
     }
 
     private void add_weight_to_sheet() {
-        final ProgressDialog loading = ProgressDialog.show(this,"Adding Weight","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this,"Adding Weight Data","Please wait");
         final String weight = weight_entry.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzCZ8F8PJKmO9avZBPY1KCp6qr8-34GTDj6u_KR8LzUI5kEPus7rvs4M4W1VFVI69wU/exec",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, getString(R.string.scripts_link),
                 response -> {
                     if(loading.isShowing())loading.dismiss();
                     Toast.makeText(this,response,Toast.LENGTH_LONG).show();

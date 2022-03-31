@@ -1,22 +1,16 @@
 package com.example.fitbitchbasic;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.Map;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -25,10 +19,14 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class food_entry extends AppCompatActivity implements View.OnClickListener{
 
     String calories, carbs, fats, water, protein;
     TextView cal_count, carbs_count, fats_count, water_count, protein_count;
+    EditText name_of_food;
 
     Button enter_data;
 
@@ -39,11 +37,12 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.food_entry);
 
         // assigning the outputs of the user to the object
-        cal_count = (TextView) findViewById(R.id.cal_count);
-        carbs_count = (TextView) findViewById(R.id.carbs_count);
-        fats_count = (TextView) findViewById(R.id.fats_count);
-        water_count = (TextView) findViewById(R.id.water_count);
-        protein_count = (TextView) findViewById(R.id.protein_count);
+        cal_count = findViewById(R.id.cal_count);
+        carbs_count = findViewById(R.id.carbs_count);
+        fats_count = findViewById(R.id.fats_count);
+        water_count = findViewById(R.id.water_count);
+        protein_count = findViewById(R.id.protein_count);
+        name_of_food = findViewById(R.id.name_of_food_editText);
 
         enter_data = findViewById(R.id.food_entry_btn);
         enter_data.setOnClickListener (this);
@@ -63,8 +62,9 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         final String fats = fats_count.getText().toString().trim();
         final String protein = protein_count.getText().toString().trim();
         final String water = water_count.getText().toString().trim();
+        final String name = name_of_food.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzCZ8F8PJKmO9avZBPY1KCp6qr8-34GTDj6u_KR8LzUI5kEPus7rvs4M4W1VFVI69wU/exec",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,  getString(R.string.scripts_link),
                 response -> {
                     if(loading.isShowing())loading.dismiss();
                     Toast.makeText(this,response,Toast.LENGTH_LONG).show();
@@ -84,6 +84,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
                 params.put("fats",fats);
                 params.put("protein",protein);
                 params.put("water",water);
+                params.put("name_of_food", name);
                 return params;
             }
         };
@@ -105,7 +106,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         //increment
         i = i + 10;
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         cal_count.setText(a);
     }
@@ -122,7 +123,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
             i = i - 10;
         }
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         cal_count.setText(a);
     }
@@ -135,7 +136,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         //increment
         i = i + 1;
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         carbs_count.setText(a);
     }
@@ -152,7 +153,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
             i = i - 1;
         }
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         carbs_count.setText(a);
     }
@@ -165,7 +166,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         //increment
         i = i + 1;
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         fats_count.setText(a);
     }
@@ -182,7 +183,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
             i = i - 1;
         }
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         fats_count.setText(a);
     }
@@ -195,7 +196,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         //increment
         i = i + 1;
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         water_count.setText(a);
     }
@@ -212,7 +213,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
             i = i - 1;
         }
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         water_count.setText(a);
     }
@@ -225,7 +226,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
         //increment
         i = i + 1;
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         protein_count.setText(a);
     }
@@ -242,7 +243,7 @@ public class food_entry extends AppCompatActivity implements View.OnClickListene
             i = i - 1;
         }
         // convert int to string
-        String a = new Integer(i).toString();
+        String a = Integer.toString(i);
         // sets the score to the corresponding text view
         protein_count.setText(a);
     }

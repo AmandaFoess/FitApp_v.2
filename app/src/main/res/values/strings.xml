@@ -12,4 +12,10 @@
     <string name="zero">0</string>
     <string name="food_entry">Food Entry</string>
     <string name="net_carbs">Net Carbs</string>
+    <string name="scripts_link">https://script.google.com/macros/s/AKfycbwdoG_AZX9q2CF6QkTxRqqvjEW5E_kJwld3HsHXfz4Gt32QlpmcFoMohVHr2HzTiear/exec</string>
+    <string name="name_of_food">Name of Food</string>
+    <string name="name">Name</string>
+    <string name="exercise_type">Exercise Type</string>
+    <string name="set_duration">Set/Duration</string>
+    <string name="exercise_entry">Exercise Entry</string>
 </resources>
