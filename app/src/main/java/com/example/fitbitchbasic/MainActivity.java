@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_food_entry = findViewById(R.id.food_entry);
         btn_weight_entry = findViewById(R.id.weight_entry);
         btn_view_entry = findViewById(R.id.view_personalized_data);
-        btn_exercise_entry = findViewById(R.id.exercise_entry_btn);
+        //btn_exercise_entry = findViewById(R.id.exercise_entry_btn);
 
         btn_view_entry.setOnClickListener(this);
         btn_food_entry.setOnClickListener(this);
         btn_weight_entry.setOnClickListener(this);
-        btn_exercise_entry.setOnClickListener(this);
+        //btn_exercise_entry.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="411dp"
+        android:layout_height="239dp"
+        android:background="@drawable/stock_photo_woman_exercise_workout_in_gym_fitness_breaking_relax_holding_apple_fruit_after_training_sport_with_250nw_749969473"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Fit Bitch 2.0"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_personalized_data"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/frame"
+        android:clipToOutline="true"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:text="View Personalized Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/food_entry"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/purple_200"
+        android:layout_margin="10dp"
+        android:text="Food Entry"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf=""/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/weight_entry"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/purple_200"
+        android:text="Weight Entry"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_entry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
